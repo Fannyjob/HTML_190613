@@ -33,10 +33,20 @@
           console.log("上午時間")
         }else if(hh==12){
           console.log("中午用餐時間")
-        }else if(13 <=hh && hh<=6){
-          console.log("下午時間")
+        }else if(13 <=hh && hh<=16){
+          console.log("下午課程")
+        }else {
+          console.log("下課囉")
         }
         // 3. 如果是 12:00-12:59，顯示中午用餐時間
+        var result;
+        if(hh<=12){
+          result = "AM"
+        }else{
+          result = "PM"
+      }console.log(result)
+      //===
+      var result2 = hh<=12 ? "AM" :"PM" ; //判斷式 ? True :false
         // 4. 如果是 13:00-16:00，顯示下午課程
         // 5. 其他的時段，顯示非課程時間
         // 6. 使用三元運算子，判斷12點以前為AM，否則為PM

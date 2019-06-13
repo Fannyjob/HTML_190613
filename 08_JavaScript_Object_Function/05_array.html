@@ -20,27 +20,55 @@
     <script>
         var weekList = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 
+        //範例資料
+        //var x = 1;
+        //var y = "2"; //字串
+        //var z = document.getElementById(); 
+        //var a = true; //布林質
+        // var b = new Date();
+        // var c = [];
+
+
         // 如果要取得陣列裡面的物件，需要透過index，從0開始
-        
+        var x = 5;
+        var y = 10;
+        var z = x + y;
+
+        console.log(weekList[3]);
+
         // 透過length取得陣列有幾個元素
         
+        console.log(weekList.length);
         // 試試看， 底下三種屬於陣列的函式
         // 1. 陣列.valueOf()
-        
+        console.log(weekList.valueOf());
         // 2. 陣列.toString()
-        
+        console.log(weekList.toString()); 
         // 3. 陣列.join("#")
-        
+        console.log(weekList.join("#")); //join可以指定串接的符號
         // 4. 移除第一個元素
-        
+        console.log(weekList.shift());
+        console.log(weekList.toString());
         // 5. 移除最後一個元素
-
+        console.log(weekList.pop());
+        console.log(weekList.toString());
         // 6. 有哪三種方法可以加入元素?
+        //weekList[5] = "saturday";  此寫法等同下方
+        weekList[weekList.length] = "saturday";
+        console.log();
+
+        weekList.unshift("123");
+        console.log(weekList.toString());
+
+        weekList.push("456");
+        console.log(weekList.toString());
 
         // 陣列內放入數值
         var lotto = [37, 13, 25, 06, 18, 30];
         
         // 7. 陣列.sort()：從小到大排序
+        lotto.sort();
+        console.log(lotto.toString());
 
         // 8. 陣列的排序指定
         lotto.sort(function(a, b) {
@@ -51,14 +79,25 @@
         var supperLotto = [34, 3, 13, 18, 1, 29];
         
         // 9. 陣列.reverse()：必須要先透過 陣列.sort() 從小到大排序後，再透過 陣列.reverse() 反轉，才是大到小排序
-        
+        supperLotto.sort(function(a,b)
+        {
+            return a - b ;
+            
+        });
+        supperLotto.reverse();
+        console.log(supperLotto.toString());
+
         // 二維的陣列
         var poker = [];
         poker[0] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
         
         // 10. 如果要取得陣列裡面的13，要如何取得?
-        
+        console.log(poker[0][12]);  //需開兩道門 指裡面的數字
+
         // 11. 二維陣列的長度
+        console.log(poker.length); //1
+        console.log(poker[0].length); //13
+
         
     </script>
 </body></html>

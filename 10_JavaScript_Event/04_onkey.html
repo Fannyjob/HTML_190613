@@ -4,11 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Event</title>
+
 </head>
 
 <body>
     <!-- 輸出畫面請參考圖片 -->
+
+    <h2>測試綁定<i>onkeypress</i>事件</h2>
+    <input type="text" onkeypress="textKeyPress(event)">
+    <p>這裡會顯示KeyCode:<span id="keyPrees1"></span></p>
+    <p>這裡會顯示charCode:<span id="keyPress2"></span></p>
+    <hr>
+    <h2>測試綁定<i>onkeydown</i>事件</h2>
+    <input type="text" onkeydown="textKeyDown(event)">
+    <p>這裡會顯示KeyCode:<span id="keyDown1"></span></p>
+    <p>這裡會顯示charCode:<span id="keyDown2"></span></p>
+
+    <script>
+        //測試onkeypress事件
+        function textKeyPress(obj) {
+            document.getElementById("keyPress1").innerHTML = obj.keyCode;
+            document.getElementById("keyPress2").innerHTML = obj.charCode;
+        }
+        function textKeyDown(obj) {
+            document.getElementById("keyDown1").innerHTML = obj.keyCode;
+            document.getElementById("keyDown2").innerHTML = obj.charCode;
+        }
+    </script>
+
+
+
     <!-- 會需要的關鍵字：onkeypress 事件、onkeydown事件、event.keyCode、event.charCode -->
 
 </body>
+
 </html>
